@@ -85,7 +85,7 @@ const BookDetails = ({ book }) => {
           </p>
         </div>
 
-        <CustomerFeedback />
+        <CustomerFeedback bookId={book._id} reviews={book.comments || []} />
       </div>
     </>
   );

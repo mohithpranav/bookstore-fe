@@ -91,11 +91,15 @@
 }
 
 .dropdown-header {
+  display: block;
   padding: 15px 20px;
+  margin-bottom: 0;
   font-size: 14px;
-  color: #333;
+  color: #222 !important;
   font-weight: 600;
-  border-bottom: 1px solid #e0e0e0;
+  /* border-bottom: 1px solid #e0e0e0; */
+  white-space: nowrap;
+  background: transparent;
 }
 
 .dropdown-item {

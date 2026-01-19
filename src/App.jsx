@@ -8,6 +8,7 @@ import BookDetailsPage from "./pages/BookDetailsPage";
 import ProfilePage from "./pages/ProfilePage";
 import CartPage from "./pages/CartPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
+import OrderPage from "./components/OrderPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/place-order/:orderId" element={<PlaceOrderPage />} />
+          <Route path="/orders" element={<OrderPage />} />
         </Route>
       </Routes>
     </Router>

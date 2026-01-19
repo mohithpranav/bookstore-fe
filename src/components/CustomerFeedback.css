@@ -81,8 +81,27 @@
   transition: background 0.3s;
 }
 
-.btn-submit-review:hover {
+.btn-submit-review:hover:not(:disabled) {
   background: #0056b3;
+}
+
+.btn-submit-review:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.review-message {
+  padding: 15px 20px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.review-message p {
+  margin: 0;
+  color: #856404;
+  font-size: 14px;
 }
 
 .reviews-list {
@@ -132,6 +151,13 @@
 .review-stars {
   display: flex;
   gap: 4px;
+  margin-bottom: 4px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
 }
 
 .review-star {
@@ -148,6 +174,15 @@
   line-height: 1.6;
   color: #666;
   margin: 0;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {

@@ -24,7 +24,7 @@ const Header = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userName");
-    
+
     // Redirect to login page
     navigate("/");
   };
@@ -59,37 +59,41 @@ const Header = () => {
 
               {showDropdown && (
                 <div className="profile-dropdown">
-                  <div className="dropdown-header">Hello {userName},</div>
-                  <Link
-                    to="/profile"
-                    className="dropdown-item"
-                    onClick={() => setShowDropdown(false)}
-                  >
-                    <i className="bi bi-person"></i>
-                    <span>Profile</span>
-                  </Link>
-                  <Link
-                    to="/orders"
-                    className="dropdown-item"
-                    onClick={() => setShowDropdown(false)}
-                  >
-                    <i className="bi bi-bag"></i>
-                    <span>My Orders</span>
-                  </Link>
-                  <Link
-                    to="/wishlist"
-                    className="dropdown-item"
-                    onClick={() => setShowDropdown(false)}
-                  >
-                    <i className="bi bi-heart"></i>
-                    <span>My Wishlist</span>
-                  </Link>
-                  <button
-                    className="dropdown-item logout-btn"
-                    onClick={handleLogout}
-                  >
-                    Logout
-                  </button>
+                  <div>
+                    <div className="dropdown-header">Hello {userName},</div>
+                    <Link
+                      to="/profile"
+                      className="dropdown-item"
+                      onClick={() => setShowDropdown(false)}
+                    >
+                      <i className="bi bi-person"></i>
+                      <span>Profile</span>
+                    </Link>
+                    <div
+                      className="dropdown-item"
+                      onClick={() => {
+                        setShowDropdown(false);
+                        navigate("/orders");
+                      }}
+                    >
+                      <i className="bi bi-bag"></i>
+                      <span>My Orders</span>
+                    </div>
+                    <Link
+                      to="/wishlist"
+                      className="dropdown-item"
+                      onClick={() => setShowDropdown(false)}
+                    >
+                      <i className="bi bi-heart"></i>
+                      <span>My Wishlist</span>
+                    </Link>
+                    <button
+                      className="dropdown-item logout-btn"
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

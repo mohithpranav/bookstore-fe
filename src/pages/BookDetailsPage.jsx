@@ -67,7 +67,7 @@ const BookDetailsPage = () => {
           Home
         </span>
         <span className="breadcrumb-separator">/</span>
-        <span className="breadcrumb-current">Book({id})</span>
+        <span className="breadcrumb-current">{book?.name}</span>
       </div>
 
       <div className="book-details-layout">
