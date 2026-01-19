@@ -1,0 +1,157 @@
+.customer-feedback {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.feedback-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.rating-section {
+  margin-bottom: 25px;
+}
+
+.rating-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+}
+
+.star-icon {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-icon.bi-star-fill {
+  color: #ffc107;
+}
+
+.star-icon:hover {
+  color: #ffc107;
+}
+
+.review-form {
+  margin-bottom: 40px;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #a94442;
+}
+
+.review-textarea::placeholder {
+  color: #ccc;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-submit-review {
+  padding: 10px 30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit-review:hover {
+  background: #0056b3;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.review-item {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.reviewer-info {
+  flex: 1;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.review-star {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.review-star.bi-star-fill {
+  color: #ffc107;
+}
+
+.review-comment {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .customer-feedback {
+    padding: 0 15px;
+  }
+}

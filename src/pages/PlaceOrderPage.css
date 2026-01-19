@@ -1,0 +1,283 @@
+.place-order-page {
+  min-height: calc(100vh - 70px);
+  background: #f5f5f5;
+  padding: 30px 0;
+}
+
+.place-order-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb-link {
+  cursor: pointer;
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  color: #a94442;
+}
+
+.breadcrumb-separator {
+  margin: 0 8px;
+}
+
+.breadcrumb-current {
+  color: #333;
+  font-weight: 500;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.order-items-section,
+.delivery-address-section,
+.order-summary-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.order-items-section h3,
+.delivery-address-section h3,
+.order-summary-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-image {
+  flex-shrink: 0;
+}
+
+.item-image img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.item-author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.item-quantity {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #a94442;
+}
+
+.item-total {
+  text-align: right;
+}
+
+.total-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a94442;
+}
+
+.address-card {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.address-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.address-details {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.address-mobile {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.address-type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #a94442;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 15px;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-row.total-row {
+  border-top: 2px solid #e0e0e0;
+  border-bottom: none;
+  padding-top: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-status {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.order-status p {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-shipped {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-place-order {
+  width: 100%;
+  padding: 15px;
+  background: #a94442;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn-place-order:hover {
+  background: #8d3635;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.error-container p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .place-order-container {
+    padding: 0 15px;
+  }
+
+  .order-item {
+    flex-direction: column;
+  }
+
+  .item-total {
+    text-align: left;
+  }
+
+  .order-items-section,
+  .delivery-address-section,
+  .order-summary-section {
+    padding: 20px 15px;
+  }
+}
