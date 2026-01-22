@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../utils/api";
 import "./Auth.css";
 
 const LoginForm = ({ onSwitchToSignup }) => {
@@ -26,10 +26,7 @@ const LoginForm = ({ onSwitchToSignup }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/signin",
-        formData,
-      );
+      const response = await api.post("/signin", formData);
 
       if (response.data.success) {
         // Store token in localStorage
@@ -99,10 +96,22 @@ const LoginForm = ({ onSwitchToSignup }) => {
       </div>
 
       <div className="social-buttons">
-        <button type="button" className="btn btn-facebook">
+        <button
+          type="button"
+          className="btn btn-facebook"
+          onClick={() => {
+            window.location.href = `${import.meta.env.VITE_API_BASE_URL}/auth/facebook`;
+          }}
+        >
           Facebook
         </button>
-        <button type="button" className="btn btn-google">
+        <button
+          type="button"
+          className="btn btn-google"
+          onClick={() => {
+            window.location.href = `${import.meta.env.VITE_API_BASE_URL}/auth/google`;
+          }}
+        >
           Google
         </button>
       </div>

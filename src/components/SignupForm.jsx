@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../utils/api";
 import "./Auth.css";
 
 const SignupForm = ({ onSwitchToLogin }) => {
@@ -69,10 +69,7 @@ const SignupForm = ({ onSwitchToLogin }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/signup",
-        formData
-      );
+      const response = await api.post("/signup", formData);
 
       if (response.data.success) {
         // Show success message and switch to login
